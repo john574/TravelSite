@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Holiday</title>
+    <link rel="stylesheet" href="sale.css">
+</head>
+<body>
+      <nav class="navigation" id="navbar">
+    <div class="logo">HOLIDAYDEALS</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="sale.html">Sell Your Holiday</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h1 style="font-family: 'Pacifico', cursive;">Sell Your Holiday</h1>
+    <p style="color: rgb(61, 61, 60);">Can't make your trip? Let us help you sell it to someone who can!</p>
+    
+
+  <div class="Box">
+    <form>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="fname">First Name*</label>
+          <input type="text" id="fname" name="fname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lname">Last Name*</label>
+          <input type="text" id="lname" name="lname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Number*</label>
+          <input type="tel" id="contact" name="contact" required>
+        </div>
+
+        <div class="form-group">
+          <label for="departure">Departure Date*</label>
+          <input type="date" id="departure" name="departure" required>
+        </div>
+
+        <div class="form-group">
+          <label for="return">Return Date*</label>
+          <input type="date" id="return" name="return" required>
+        </div>
+
+       
+      </div>
+<br>
+<div class="form-group-row">
+  <div class="form-group">
+    <label for="adult">Adult*</label>
+    <select id="adult" name="adult" required>
+      <option value="" disabled selected>Select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6+">6+</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="kids">Kids (under 12)</label>
+    <select id="kids" name="kids">
+      <option value="" disabled selected>0</option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5+">5+</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="infants">Infants</label>
+    <select id="infants" name="infants">
+      <option value="" disabled selected>0</option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3+">3+</option>
+    </select>
+  </div>
+</div>
+<br>
+<div class="form-group">
+  <label for="price">How much are you looking to sell your holiday for? *</label>
+  <input type="number" id="price" name="price" placeholder="₱" required>
+</div>
+<br>
+<div class="form-group" style="grid-column: span 2;">
+  <label for="additionalInfo">Additional Information</label>
+  <textarea 
+    id="additionalInfo" 
+    name="additionalInfo" 
+    rows="5" 
+    placeholder="Tell us about your holiday (destination, hotel, activities included, etc...)"
+  ></textarea>
+</div>
+<br>
+<p style="text-align: left; color: rgb(66, 66, 66);">Upload Pictures (Up to 8 images)</p> <br>
+<div id="dropArea" class="drop-area">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+      <path d="M20 5h-3.17l-1.83-2H8L6.17 5H3c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h17c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 12H4V7h3.76l1.83-2h5.82l1.83 2H20v10zM12 9a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+    </svg>
+    <p>Drag and drop images here</p>
+
+    <label class="file-button-label" for="fileElem">or click to browse file</label>
+  <input type="file" id="fileElem" class="file-input" multiple accept="image/*" max="8" />
+  <button class="choose-file-button" onclick="document.getElementById('fileElem').click()">Choose File</button>
+</div>
+<p style="text-align: left; color: rgb(63, 63, 63);">Maximum 8 images, 5MB each. Supported formats: JPG, PNG, GIF</p> <br>
+ <button class="submit-btn" type="submit">Submit Holiday Details</button>
+  </div>
+
+  
+
+
+    </form>
+  </div>
+
+  </section>
+
+  <footer>
+    
+  </footer>
+
+  
+<script>
+  const dropArea = document.getElementById('dropArea');
+  const fileInput = document.getElementById('fileElem');
+
+  // Highlight drop area when item is dragged over
+  dropArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropArea.classList.add('dragover');
+  });
+
+  dropArea.addEventListener('dragleave', () => {
+    dropArea.classList.remove('dragover');
+  });
+
+  dropArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropArea.classList.remove('dragover');
+
+    const files = e.dataTransfer.files;
+    if(files.length > 8) {
+      alert("You can upload up to 8 images only.");
+      return;
+    }
+
+    fileInput.files = files;
+    // You can add further file processing here...
+  });
+
+  // Clicking drop area triggers file input
+  dropArea.addEventListener('click', () => {
+    fileInput.click();
+  });
+</script>
+</body>
+</html>

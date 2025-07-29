@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelSite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navigation" id="navbar">
+    <div class="logo">HOLIDAYDEALS</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="sale.html">Sell Your Holiday</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <h1 style="font-family: 'Playfair Display', serif;">Your Dream Holidays Awaits</h1>
+      <p style="font-family: 'Playfair Display', serif;">Discover amazing deals on unforgettable vacations</p>
+    </div>
+  </header>
+
+
+<!--LAST MINUTE DEALS-->
+  <section>
+  <h1 style=" font-family: 'Playfair Display', serif;">LAST MINUTE DEALS</h1>
+  <div class="parent">
+    <div class="card">
+      <div class="images">
+        <img src="/assets/22.jpg" alt="El Nido">
+      </div>
+      <h2>El Nido, Palawan</h2>
+      <p>5days in Paradise leaving tomorrow</p>
+      <h3>₱68,773</h3>
+    </div>
+
+    <div class="card">
+      <div class="images">
+        <img src="/assets/33.jpg" alt="El Nido">
+      </div>
+      <h2>Tagaytay + Palawan</h2>
+      <p>Romantic getaway departing Friday</p>
+      <h3>₱17,000</h3>
+    </div>
+
+    <div class="card">
+      <div class="images">
+        <img src="/assets/9.jpg" alt="El Nido">
+      </div>
+      <h2>Mountain Adventure</h2>
+      <p>Sagada, Mountain Province</p>
+      <h3>₱33,900</h3>
+    </div>
+  </div>
+</section>
+<!--HOT DEALS-->
+  <section class="hotdeals">
+  <h1 style="font-family: 'Playfair Display', serif;">HOT HOLIDAYS</h1>
+  <div class="parent2">
+    <div class="card2">
+      <div class="images">
+        <img src="/assets/22.jpg" alt="El Nido">
+      </div>
+      <h2>Coron, Palawan</h2>
+      <p>Tropical paradise awaits</p>
+      <h3>₱57,942</h3>
+    </div>
+
+    <div class="card2">
+      <div class="images">
+        <img src="/assets/5.jpg" alt="El Nido">
+      </div>
+      <h2>Boracay</h2>
+      <p>7days of sun and beaches</p>
+      <h3>₱56,818</h3>
+    </div>
+
+    <div class="card2">
+      <div class="images">
+        <img src="/assets/3.jpg" alt="El Nido">
+      </div>
+      <h2>Siargao</h2>
+      <p>Surf, serenity & secret lagoons</p>
+      <h3>₱45,400</h3>
+    </div>
+
+        <div class="card2">
+      <div class="images">
+        <img src="/assets/1.jpg" alt="El Nido">
+      </div>
+      <h2>Bohol</h2>
+      <p>Hills of wonder & island adventures</p>
+      <h3>₱40,849</h3>
+    </div>
+  </div>
+</section>
+
+<!--50% OFF-->
+  <section class="third">
+  <h1 style="font-family: 'Playfair Display', serif;">OVER 50% OFF</h1>
+  <div class="parent3">
+    <div class="card3">
+      <div class="images">
+        <img src="/assets/7.jpg" alt="El Nido">
+      </div>
+      <h2>Iloilo + Guimaras Combo</h2>
+      <p>14days of luxury sailing through paradise island</p>
+      <h3>₱57,942</h3>
+    </div>
+
+    <div class="card3">
+      <div class="images">
+        <img src="/assets/2.jpg" alt="El Nido">
+      </div>
+      <h2>Cebu South Adventure</h2>
+      <p>10days discovering the island down under</p>
+      <h3>₱78,242</h3>
+    </div>
+
+  </div>
+</section>
+
+<footer></footer>
+  <script>
+    // Add .solid class to navbar on scroll
+    const nav = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        nav.classList.add("solid");
+      } else {
+        nav.classList.remove("solid");
+      }
+    });
+  </script>
+</body>
+
+</html>

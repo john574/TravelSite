@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Invisibles Systems</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #374151;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e5e7eb;
+      margin-top: 2rem;
+    }
+    .products-list li {
+      margin-bottom: 1rem;
+    }
+    .cert-link {
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.country !== 'VN') {
+          document.body.innerHTML = '<main><h2>Access Restricted</h2><p>This site is only available in Vietnam.</p></main>';
+        }
+      });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Invisibles Systems</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="certifications.html">Certifications</a>
+  </nav>
+  <main>
+    <h2>Welcome to Invisibles Systems</h2>
+    <p><strong>Address:</strong> 123 Logistics Tech Park, Hanoi, Vietnam</p>
+    <h3>About Us</h3>
+    <p>Invisibles Systems designs and manufactures high-performance, certified hardware solutions for the logistics and supply chain industry. We are committed to innovation, compliance, and reliability to support global logistics infrastructure.</p>
+    <img src="https://source.unsplash.com/800x200/?logistics,warehouse" alt="Logistics Image" style="width:100%;margin-top:1rem;" />
+  </main>
+  <footer>
+    &copy; 2025 Invisibles Systems
+  </footer>
+</body>
+</html>

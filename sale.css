@@ -1,0 +1,333 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Navigation */
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 30px;
+      background-color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .navigation .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.5em;
+      color: #222;
+    }
+
+    .navigation ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .navigation ul li a {
+      font-size: 1em;
+      color: #222;
+      text-decoration: none;
+      padding: 5px 10px;
+      position: relative;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    /* Underline hover */
+    .navigation ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      background: currentColor;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .navigation ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Solid navbar on scroll */
+    .navigation.solid {
+      background-color: rgba(0, 0, 0, 0.311);
+    }
+
+    .navigation.solid .logo,
+    .navigation.solid ul li a {
+      color: #fff;
+    }
+
+    .navigation.solid ul li a::after {
+      background: #fff;
+    }
+
+    /* Section content */
+    section {
+      padding-top: 120px; /* space below fixed navbar */
+      text-align: center;
+      padding-bottom: 100px;
+    }
+
+    section h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-top: -40px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .Box {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      width: 170%;
+      margin-top: 50px;
+      margin-left: -160px;
+    }
+
+    .Box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 30px;
+      text-align: left;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    .submit-btn {
+      grid-column: span 2;
+      padding: 12px;
+      background-color: #007BFF;
+      border: none;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .submit-btn {
+        grid-column: span 1;
+      }
+    }
+
+    select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 30px;
+}
+
+@media (max-width: 768px) {
+  .form-group-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+input[type="number"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+
+
+.upload-container {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  label.upload-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .drop-area {
+    position: relative;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    background: #fff;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    text-align: center;
+    color: #777;
+    user-select: none;
+  }
+
+  .drop-area.dragover {
+    border-color: #007BFF;
+    background-color: #e7f0ff;
+    color: #007BFF;
+  }
+
+  .drop-area svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    fill: currentColor;
+  }
+
+  .drop-area p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .file-button-label {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  .file-input {
+    margin-top: 6px;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .choose-file-button {
+    background-color: #007BFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .choose-file-button:hover {
+    background-color: #0056b3;
+  }
+
+
+    footer{
+      height: 700px;
+    }
